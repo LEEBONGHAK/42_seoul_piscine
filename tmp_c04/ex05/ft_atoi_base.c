@@ -53,3 +53,40 @@ int	ft_atoi(char *str)
 	}
 	return (sign * res);
 }
+
+int	check_exception(char *base)
+{
+	int	i;
+	int	j;
+	int	size;
+
+	size = 0;
+	while (base[size] != '\0')
+	{
+		size++;
+	}
+	i = 0;
+	if (size == 0 || size == 1)
+		return (1);
+	while (base[i] != '\0')
+	{
+		j = i + 1;
+		if (base[i] == '+' || base[i] == '-' || base[i] == ' ')
+			return (1);
+		while (base[j] != '\0')
+		{
+			if (base[i] == base[j])
+				return (1);
+			j++;
+		}
+		i++;
+	}
+	return (0);
+}
+
+int	ft_atoi_base(char *str, char *base)
+{
+	if (check_exception(base))
+		return (0);
+	return (ft_atoi(str));
+}
