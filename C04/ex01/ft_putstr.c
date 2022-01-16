@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bolee <bolee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/08 11:01:34 by bolee             #+#    #+#             */
-/*   Updated: 2022/01/15 19:37:48 by bolee            ###   ########.fr       */
+/*   Created: 2022/01/13 19:20:00 by bolee             #+#    #+#             */
+/*   Updated: 2022/01/13 19:20:01 by bolee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	rush(int x, int y);
+#include <unistd.h>
 
-/*
- ** have to deal exception when x is zero and y is not zero
-*/
-
-int	main(void)
+void	ft_putstr(char *str)
 {
-	rush(4, 4);
-	return (0);
+	while (*str)
+	{
+		write(1, str, 1);
+		str++;
+	}
 }
