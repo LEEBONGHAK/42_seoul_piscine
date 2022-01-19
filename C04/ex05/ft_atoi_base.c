@@ -6,7 +6,7 @@
 /*   By: bolee <bolee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 19:24:32 by bolee             #+#    #+#             */
-/*   Updated: 2022/01/15 11:16:52 by bolee            ###   ########.fr       */
+/*   Updated: 2022/01/19 18:24:33 by bolee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,21 +26,16 @@ int	find_res(int res, char *str, char *base, int flag)
 
 	while (*str)
 	{
-		i = -1;
+		i = 0;
 		flag = 1;
-		while (base[++i])
+		while (base[i])
 		{
-			if (*str == base[i] && res == 0)
+			if (*str == base[i])
 			{
-				flag = 0;
-				res += i;
-			}
-			else if (*str == base[i])
-			{
-				res *= base_size(base);
-				res += i;
+				res = res * base_size(base) + i;
 				flag = 0;
 			}
+			i++;
 		}
 		if (flag)
 			return (res);

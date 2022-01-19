@@ -6,21 +6,9 @@
 /*   By: bolee <bolee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 19:20:36 by bolee             #+#    #+#             */
-/*   Updated: 2022/01/15 11:15:59 by bolee            ###   ########.fr       */
+/*   Updated: 2022/01/19 18:25:17 by bolee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	cal_res(int res, char *str)
-{
-	if (res == 0)
-		res += *str - 48;
-	else
-	{
-		res *= 10;
-		res += *str - 48;
-	}
-	return (res);
-}
 
 int	ft_atoi(char *str)
 {
@@ -40,7 +28,7 @@ int	ft_atoi(char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 	{
-		res = cal_res(res, str);
+		res = res * 10 + *str - 48;
 		str++;
 	}
 	return (sign * res);
