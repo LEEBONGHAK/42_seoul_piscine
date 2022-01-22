@@ -6,7 +6,7 @@
 /*   By: bolee <bolee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 18:04:32 by bolee             #+#    #+#             */
-/*   Updated: 2022/01/12 18:51:59 by bolee            ###   ########.fr       */
+/*   Updated: 2022/01/22 12:06:13 by bolee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,10 @@ void	print(char c)
 	write(1, &c, 1);
 }
 
-void	print_hex(int c)
+void	print_hex(unsigned char c)
 {
 	char	*base;
 
-	if (c < 0)
-		c += 256;
 	base = "0123456789abcdef";
 	print(base[c / 16]);
 	print(base[c % 16]);
@@ -35,7 +33,7 @@ void	ft_putstr_non_printable(char *str)
 		if (*str < 32 || *str > 126)
 		{
 			print('\\');
-			print_hex((int) *str);
+			print_hex((unsigned char) *str);
 		}
 		else
 			print(*str);

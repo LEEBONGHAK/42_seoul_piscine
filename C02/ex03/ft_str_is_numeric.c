@@ -6,7 +6,7 @@
 /*   By: bolee <bolee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 14:13:41 by bolee             #+#    #+#             */
-/*   Updated: 2022/01/09 15:07:34 by bolee            ###   ########.fr       */
+/*   Updated: 2022/01/22 12:03:40 by bolee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,11 @@ int	ft_str_is_numeric(char *str)
 {
 	int	i;
 
-	if (str[0] == '\0')
-	{
-		return (1);
-	}
 	i = 0;
 	while (str[i] != '\0')
 	{
 		if (str[i] < 48 || str[i] > 57)
-		{
 			return (0);
-		}
 		i++;
 	}
 	return (1);

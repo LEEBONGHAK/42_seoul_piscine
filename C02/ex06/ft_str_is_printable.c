@@ -6,7 +6,7 @@
 /*   By: bolee <bolee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 15:07:03 by bolee             #+#    #+#             */
-/*   Updated: 2022/01/10 21:36:11 by bolee            ###   ########.fr       */
+/*   Updated: 2022/01/22 12:04:16 by bolee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@ int	ft_str_is_printable(char *str)
 {
 	while (*str)
 	{
-		if (*str < 32 || *str == 127)
-		{
+		if (*str < 32 || *str > 126)
 			return (0);
-		}
 		str++;
 	}
 	return (1);
