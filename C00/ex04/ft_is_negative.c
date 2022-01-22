@@ -6,13 +6,13 @@
 /*   By: bolee <bolee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 09:03:36 by bolee             #+#    #+#             */
-/*   Updated: 2022/01/08 09:05:42 by bolee            ###   ########.fr       */
+/*   Updated: 2022/01/22 11:59:48 by bolee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_is_negative(int	n)
+void	ft_is_negative(int n)
 {
 	char	N;
 	char	P;
