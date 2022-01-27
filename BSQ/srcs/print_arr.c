@@ -6,7 +6,7 @@
 /*   By: bolee <bolee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 10:07:07 by bolee             #+#    #+#             */
-/*   Updated: 2022/01/24 15:36:40 by bolee            ###   ########.fr       */
+/*   Updated: 2022/01/27 16:46:20 by bolee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,5 @@ void	print_arr(char *str, t_infos *infos, t_location *loc)
 		i++;
 	}
 	write(1, str, (infos->cols + 1) * infos->rows);
+	write(1, "\n", 1);
 }

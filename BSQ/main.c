@@ -6,7 +6,7 @@
 /*   By: bolee <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:42:08 by bolee             #+#    #+#             */
-/*   Updated: 2022/01/26 16:42:10 by bolee            ###   ########.fr       */
+/*   Updated: 2022/01/27 16:45:59 by bolee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	no_argv(char *file_str, char *info_str, char *map_str)
 	get_info(info_str, map_str, &info);
 	if (!is_valid(file_str, info_str, map_str, info))
 	{
-		write(1, "map error\n", 10);
+		write(1, "map error\n\n", 10);
 		free(file_str);
 		free(map_str);
 		free(info_str);
@@ -51,7 +51,7 @@ void	ok_argv(char *file_str, char *info_str, char *map_str, char *argv)
 	get_info(info_str, map_str, &info);
 	if (!is_valid(file_str, info_str, map_str, info))
 	{
-		write(1, "map error\n", 10);
+		write(1, "map error\n\n", 10);
 		free(file_str);
 		free(map_str);
 		free(info_str);
