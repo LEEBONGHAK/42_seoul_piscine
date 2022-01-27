@@ -6,7 +6,7 @@
 /*   By: yosong <yosong@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 09:48:45 by bolee             #+#    #+#             */
-/*   Updated: 2022/01/26 12:28:57 by bolee            ###   ########.fr       */
+/*   Updated: 2022/01/27 10:22:17 by bolee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include <stdlib.h>
-# include <stdio.h>
 
 typedef long long	t_ll;
 
