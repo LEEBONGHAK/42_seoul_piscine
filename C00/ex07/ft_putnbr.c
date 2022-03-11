@@ -44,7 +44,6 @@ int	find_for_division(int nb)
 
 void	print_num(int nb)
 {
-	int		check;
 	int		for_division;
 	char	tmp;
 
